@@ -1,0 +1,411 @@
+/*------------- IMPORT FONT -------------*/
+@font-face {font-family: "Pokemon Fire Red"; 
+  src: url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot"); 
+  src: url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot?#iefix") 
+       format("embedded-opentype"), 
+       url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff2") 
+       format("woff2"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff") 
+       format("woff"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.ttf") 
+       format("truetype"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.svg#Pokemon Fire Red") 
+       format("svg"); }
+
+/*------------- HTML MAIN -------------*/
+.root{
+background-color: #1c1c1c;
+color: #828282;
+justify-content: center;
+font-family: "Pokemon Fire Red", sans-serif;
+font-size: 22px;
+}
+
+button{
+font-family: "Pokemon Fire Red", sans-serif;
+display: inline-block;
+outline: none;
+cursor: pointer;
+border-radius: 3px;
+padding: 2px 10px;
+height: 21px;
+border: none;
+color: #cccccc;
+background-color: rgb(53, 53, 53);
+transition: background-color 0.1s ease, color 0.1s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+button:hover{
+background-color: #586e75;
+}
+
+/*------------- HTML APP -------------*/
+
+#app-game-box{
+background-color: #0e0e0e;
+width: 550px;
+height: 650px;
+border-radius: 4px;
+position: relative;
+overflow: hidden;
+}
+
+#app-text-box{
+background-color: rgba(255, 255, 255, 0.02);
+width: 330px;
+height: 100px;
+border-radius: 4px;
+box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+margin-top: 550px;
+margin-left: 20px;
+}
+
+#app-menu-box{
+background-color: rgba(255, 255, 255, 0.02);
+width: 150px;
+height: 100px;
+border-radius: 4px;
+box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+margin-top: 20px;
+margin-left: 20px;
+position: relative;
+}
+
+/*------------- PICTURES/SPRITES -------------*/
+#background-picture{
+position: absolute;
+padding: 20px;
+border-radius: 24px;
+}
+
+#fight-platform-picture{
+position: absolute;
+}
+
+#foregroundLayer{
+position: absolute;
+}
+
+#foreground-pokemon-enemy{
+position: absolute;
+}
+
+#foreground-pokemon-player{
+position: absolute;
+animation: pokemon-player-animation 0.5s infinite;
+}
+
+@keyframes pokemon-player-animation {
+50% {
+  transform: translateY(5px);
+}
+}
+
+.element-picture{
+position: absolute;
+}
+
+/*------------- PLAYER ELEMENT -------------*/
+#element-box-player{
+width: 37px;
+height: 12px;
+border-style: solid;
+border-width: 1px;
+position: absolute;
+right: 10px;
+top: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#element-box-player-text{
+font-size: 14px;
+color:rgba(255, 255, 255, 1);
+line-height: 1.1;
+text-shadow: 1px 1px #000000;
+letter-spacing: 1px;
+position: absolute;
+text-transform:uppercase;
+}
+
+/*------------- ENEMY ELEMENT -------------*/
+#element-box-enemy{
+width: 37px;
+height: 12px;
+border-style: solid;
+border-width: 1px;
+position: absolute;
+right: 10px;
+top: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#element-box-player-enemy{
+font-size: 14px;
+color:rgba(255, 255, 255, 1);
+line-height: 1.1;
+text-shadow: 1px 1px #000000;
+letter-spacing: 1px;
+position: absolute;
+text-transform:uppercase;
+}
+
+/*------------- STATS -------------*/
+#player-stats{
+background-color: #202020;
+width: 200px;
+height: 55px;
+border-radius: 4px;
+box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+position: absolute;
+top: 20px;
+left: 30px;
+}
+
+#enemy-stats{
+background-color: #202020;
+width: 200px;
+height: 55px;
+border-radius: 4px;
+box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+position: absolute;
+top: 20px;
+left: 270px;
+}
+
+.stats-name-box{
+position: absolute;
+top: 5px;
+left: 10px;
+font-size: 24px;
+}
+
+.stats-hp-box{
+position: absolute;
+top:30px;
+right: 10px;
+font-size: 20px;
+}
+
+.stats-text-hp{
+position: absolute;
+top:3px;
+right: 52px;
+font-size: 16px;
+}
+
+.stats-lvl-box{
+position: absolute;
+top:30px;
+left: 10px;
+font-size: 20px;
+}
+
+.stats-text-lvl{
+position: absolute;
+top:3px;
+left: 0px;
+font-size: 16px;
+}
+
+.stats-text-lvl-number{
+position: absolute;
+top:3px;
+left: 20px;
+font-size: 16px;
+}
+
+/*------------- MAIN MENU TEXT -------------*/
+#render-main-menu-text{
+font-size: 30px;
+margin-top:10px;
+margin-left: 10px;
+overflow: hidden;
+}
+
+/*------------- MENU BUTTONS -------------*/
+#menu-button-1 {
+position: absolute;
+top: 10px;
+left: 10px;
+width: 60px;
+height: 35px;
+font-size: 19px;
+text-transform:uppercase;
+}
+
+#menu-button-2 {
+position: absolute;
+top: 10px;
+right: 10px;
+width: 60px;
+height: 35px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#menu-button-3 {
+position: absolute;
+top: 55px;
+left: 10px;
+width: 60px;
+height: 35px;
+font-size: 17px;
+text-transform:uppercase;
+}
+
+#menu-button-4 {
+position: absolute;
+top: 55px;
+right: 10px;
+width: 60px;
+height: 35px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+/*------------- FIGHT BUTTONS -------------*/
+#fight-text-button-1 {
+position: absolute;
+top: 10px;
+left: 10px;
+width: 150px;
+height: 35px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#fight-text-button-2 {
+position: absolute;
+top: 10px;
+right: 10px;
+width: 150px;
+height: 35px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#fight-text-button-3 {
+position: absolute;
+bottom: 10px;
+left: 10px;
+width: 150px;
+height: 35px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#fight-text-button-4 {
+position: absolute;
+bottom: 10px;
+right: 10px;
+width: 150px;
+height: 35px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+
+/*------------- POKEMON MENU -------------*/
+#pokemon-1{
+position: absolute;
+top: 10px;
+left: 10px;
+width: 95px;
+height: 80px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#pokemon-1:hover{
+background-image: url('assets/pokemon/bulbasaur.png');
+background-position: center;
+text-indent: -9999px;
+background-color: #58834f;
+}
+
+#pokemon-2{
+position: absolute;
+top: 10px;
+left: 115px;
+width: 95px;
+height: 80px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#pokemon-2:hover{
+background-image: url('assets/pokemon/charmander.png');
+background-position: center;
+text-indent: -9999px;
+background-color: #886332;
+}
+
+#pokemon-3{
+position: absolute;
+top: 10px;
+left: 220px;
+width: 95px;
+height: 80px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#pokemon-3:hover{
+background-image: url('assets/pokemon/squirtle.png');
+background-position: center;
+text-indent: -9999px;
+background-color: #4f8183;
+}
+
+/*------------- BAG MENU -------------*/
+#bag-1{
+position: absolute;
+top: 10px;
+left: 10px;
+width: 95px;
+height: 80px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#bag-1:hover{
+background-image: url('assets/items/potion.png');
+background-position: center;
+text-indent: -9999px;
+}
+
+#bag-2{
+position: absolute;
+top: 10px;
+left: 115px;
+width: 95px;
+height: 80px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#bag-2:hover{
+background-image: url('assets/items/pokeball_normal.png');
+background-position: center;
+text-indent: -9999px;
+}
+
+#bag-3{
+position: absolute;
+top: 10px;
+left: 220px;
+width: 95px;
+height: 80px;
+font-size: 22px;
+text-transform:uppercase;
+}
+
+#bag-3:hover{
+background-image: url('assets/items/rarecandy.png');
+background-position: center;
+text-indent: -9999px;
+}

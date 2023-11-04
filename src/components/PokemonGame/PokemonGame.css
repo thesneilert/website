@@ -1,0 +1,39 @@
+@font-face {font-family: "Pokemon Fire Red"; 
+    src: url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot"); 
+    src: url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot?#iefix") 
+         format("embedded-opentype"), 
+         url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff2") 
+         format("woff2"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff") 
+         format("woff"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.ttf") 
+         format("truetype"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.svg#Pokemon Fire Red") 
+         format("svg"); }
+
+button{
+    font-family: "Pokemon Fire Red", sans-serif;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 2px 10px;
+    height: 21px;
+    border: none;
+    color: #cccccc;
+    background-color: rgb(53, 53, 53);
+    transition: background-color 0.1s ease, color 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    button:hover{
+    background-color: #586e75;
+    }
+
+#box{
+    width: 550px;
+    height: 650px;
+    background-color: #0e0e0e;
+    font-family: "Pokemon Fire Red", sans-serif;
+    font-size: 22px;
+    color: #828282;
+}
