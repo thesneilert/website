@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/sneilertno" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/pokemon" element={<Pokemon />} />
       </Routes>
     </>
