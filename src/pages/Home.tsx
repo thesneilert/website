@@ -3,9 +3,9 @@ import React from 'react';
 import Header from '../components/Header';
 import PageIllustration from '../components/PageIllustration';
 import HeroHome from '../components/HeroHome';
-// import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import PokemonGame from '../components/PokemonGame/PokemonGame';
+import FeaturesZigzag from '../components/FeaturesZigzag';
 
 function Home() {
   return (
@@ -18,10 +18,8 @@ function Home() {
         </div>
 
         <HeroHome />
-        {/* <FeaturesZigZag /> */}
+        <FeaturesZigzag />
       </main>
-
-      {/* <Banner /> */} 
 
       <Footer />
       <PokemonGame />
