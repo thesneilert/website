@@ -3,7 +3,6 @@ import React from 'react';
 import Header from '../components/Header';
 import PageIllustration from '../components/PageIllustration';
 import HeroHome from '../components/HeroHome';
-import FeaturesZigZag from '../components/FeaturesZigzag';
 // import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import PokemonGame from '../components/PokemonGame/PokemonGame';
